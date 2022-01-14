@@ -5,6 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  text-align: center;
+  background-color: bisque;
+  
+  
+}
+.photo
+{
+  height: 150px;
+  width:150px;
 }
 
 code {

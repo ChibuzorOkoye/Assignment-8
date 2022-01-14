@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       accountBalance: 14568.27,
       currentUser: {
-        userName: 'Not Defined',
+        userName: 'James',
         memberSince: '08/23/99',
       }
     }
@@ -35,9 +35,11 @@ class App extends Component {
     return (
       <Router>
         <Routes>
-        <Route path = "/" element = {<Home />}/>
+        <Route path = "/" element = {<Home accountBalance={this.state.accountBalance} userName = {this.state.currentUser.userName} />}/>
         <Route path = "/userProfile" element = {<UserProfile userName = {this.state.currentUser.userName} memberSince = {this.state.currentUser.memberSince}accountBalance={this.state.accountBalance} />}/>
         <Route path = "/logIn" element = {<LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} {...this.props}/>}/>
+        <Route path = "/debit" element = {<Debit accountBalance={this.state.accountBalance} />}/>
+        <Route path = "/credit" element = {<Credit accountBalance={this.state.accountBalance} />}/>
         </Routes>
     </Router>
     );

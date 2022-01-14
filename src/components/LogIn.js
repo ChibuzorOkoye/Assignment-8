@@ -29,12 +29,17 @@ class LogIn extends Component {
   }
 
   render () {
+
+    
+
     if (this.state.redirect) {
       return (<Navigate to="/userProfile"/>)
     }
 
     return (
       <div>
+         <img className = "photo" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/9108/bank-clipart-md.png" alt="bank"/>
+          <h1>Bank of React</h1>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="userName">User Name</label>
